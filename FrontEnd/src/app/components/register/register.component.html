@@ -1,0 +1,55 @@
+<!-- TIENE DOBLE VALIDACION, VER CUAL QUEDA MEJOR -->
+<div class="row">
+    <div class="col-sm-6 offset-3 mt-5">
+        <div class="card">
+            <h4 class="card-header">Registro de Cuenta</h4>
+            <div class="card-body">
+                <form [formGroup]="userAdd" (ngSubmit)="addUser()" class="needs-validation">
+                    <div class="form-group mb-3">
+                        <label for="nombre" class="form-label textoResaltado">Nombre</label>
+                        <div class="input-group has-validation">
+                            <input formControlName="nombre" type="nombre" class="form-control" id="nombre" 
+                            required autocomplete="off">
+                            <div class="invalid-feedback">
+                                Ingrese su nombre
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="apellido" class="form-label textoResaltado">Apellido</label>
+                        <div class="input-group has-validation">
+                            <input formControlName="apellido" type="apellido" class="form-control" id="apellido" 
+                            required autocomplete="off">
+                            <div class="invalid-feedback">
+                                Ingrese su apellido
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="username" class="form-label textoResaltado">Nombre de usuario</label>
+                        <div class="input-group has-validation">
+                            <input formControlName="username" type="text" class="form-control" id="username" 
+                             required autocomplete="off">
+                            <div class="invalid-feedback">
+                                Ingrese su nombre de usuario
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="passw" class="form-label textoResaltado">Contraseña</label>
+                        <div class="input-group has-validation">
+                            <input formControlName="password" type="password" class="form-control" id="passw" required>
+                            <div class="invalid-feedback">
+                                Ingrese su contraseña
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button type="submit" [disabled]="userAdd.invalid" class="btn btn-success btn-lg">Crear cuenta</button>
+                        <button type="button" routerLink="/" class="btn btn-success btn-lg">Volver</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
