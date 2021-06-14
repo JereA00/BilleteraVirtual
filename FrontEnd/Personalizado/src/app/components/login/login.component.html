@@ -1,0 +1,35 @@
+
+<div class="row">
+    <div class="col-sm-6 offset-3 mt-5">
+        <div class="card">
+            <h4 class="card-header">Ingreso a Cuenta</h4>
+            <div class="card-body">
+                <form [formGroup]="form" (ngSubmit)="onSubmit()">
+                    <div class="form-group mb-3">
+                        <label for="username" class="form-label textoResaltado">Nombre de usuario</label>
+                        <input formControlName="username" type="text" class="form-control" id="username" 
+                        required autocomplete="off" [ngClass]="{ 'is-invalid': submitted && f.username.errors }">
+                        <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                            <div *ngIf="f.username.errors.required">El nombre de usuario es requerido</div>
+                        </div>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="password" class="form-label textoResaltado">Contraseña</label>
+                        <input formControlName="password" type="password" class="form-control" 
+                        [ngClass]="{ 'is-invalid': submitted && f.password.errors }" id="password" required>
+                        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                            <div *ngIf="f.password.errors.required">La contraseña es requerida</div>
+                        </div>
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button [disabled]="loading"  type="submit" class="btn btn-success btn-lg">
+                            <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                            Ingresar
+                        </button>
+                        <button type="button" routerLink="/register" class="btn btn-success btn-lg">Registrar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

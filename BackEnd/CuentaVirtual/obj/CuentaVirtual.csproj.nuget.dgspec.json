@@ -1,25 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "/Users/jerea00/Desktop/NetCore/CuentaVirtual/CuentaVirtual/CuentaVirtual.csproj": {}
+    "E:\\Angular\\CarteraVirtual - PIL\\BilleteraVirtual\\BackEnd\\CuentaVirtual\\CuentaVirtual.csproj": {}
   },
   "projects": {
-    "/Users/jerea00/Desktop/NetCore/CuentaVirtual/CuentaVirtual/CuentaVirtual.csproj": {
+    "E:\\Angular\\CarteraVirtual - PIL\\BilleteraVirtual\\BackEnd\\CuentaVirtual\\CuentaVirtual.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/jerea00/Desktop/NetCore/CuentaVirtual/CuentaVirtual/CuentaVirtual.csproj",
+        "projectUniqueName": "E:\\Angular\\CarteraVirtual - PIL\\BilleteraVirtual\\BackEnd\\CuentaVirtual\\CuentaVirtual.csproj",
         "projectName": "CuentaVirtual",
-        "projectPath": "/Users/jerea00/Desktop/NetCore/CuentaVirtual/CuentaVirtual/CuentaVirtual.csproj",
-        "packagesPath": "/Users/jerea00/.nuget/packages/",
-        "outputPath": "/Users/jerea00/Desktop/NetCore/CuentaVirtual/CuentaVirtual/obj/",
+        "projectPath": "E:\\Angular\\CarteraVirtual - PIL\\BilleteraVirtual\\BackEnd\\CuentaVirtual\\CuentaVirtual.csproj",
+        "packagesPath": "C:\\Users\\jeremias\\.nuget\\packages\\",
+        "outputPath": "E:\\Angular\\CarteraVirtual - PIL\\BilleteraVirtual\\BackEnd\\CuentaVirtual\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "/Users/jerea00/.config/NuGet/NuGet.Config"
+          "C:\\Users\\jeremias\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -91,7 +97,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.301/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

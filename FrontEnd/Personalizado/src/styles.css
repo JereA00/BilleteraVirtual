@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+.textoResaltado {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+}
+
+.app-container {
+  min-height: 320px;
+  overflow: hidden;
+}
+
+.btn-delete-user {
+  width: 40px;
+  text-align: center;
+  box-sizing: content-box;
+}

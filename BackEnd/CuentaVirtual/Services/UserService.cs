@@ -52,7 +52,7 @@ namespace CuentaVirtual.Services
 
             // Valida
             if (user == null || !BCryptNet.Verify(model.Password, user.PasswordHash))
-                throw new AppException("Username or password is incorrect");
+                throw new AppException("Usuario o contraseña incorrecta");
 
             // Autenticacion exitosa
             var response = _mapper.Map<AuthenticateResponse>(user);
@@ -77,7 +77,7 @@ namespace CuentaVirtual.Services
         {
             // Valida
             if (_context.Users.Any(x => x.Username == model.Username))
-                throw new AppException("Username '" + model.Username + "' is already taken");
+                throw new AppException("El usuario '" + model.Username + "' ya existe");
 
             // Mapeo de modelo a nuevo objeto user
             var user = _mapper.Map<User>(model);
@@ -97,7 +97,7 @@ namespace CuentaVirtual.Services
 
             // Valida parametros
             if (model.Username != user.Username && _context.Users.Any(x => x.Username == model.Username))
-                throw new AppException("Username '" + model.Username + "' is already taken");
+                throw new AppException("El usuario '" + model.Username + "' ya existe");
 
             // Hash de contraseña si fue ingresada
             if (!string.IsNullOrEmpty(model.Password))
@@ -121,7 +121,7 @@ namespace CuentaVirtual.Services
         private User getUser(int id)
         {
             var user = _context.Users.Find(id);
-            if (user == null) throw new KeyNotFoundException("User not found");
+            if (user == null) throw new KeyNotFoundException("Usuario no encontrado");
             return user;
         }
     }
