@@ -1,0 +1,51 @@
+<div class="row">
+  <div class="col-sm-4 offset-2">
+    <div class="col-sm-6 offset-2">
+      <h2 class="mt-3 text-center">Cotizacion Dolar</h2>
+      <div class="card m-3" *ngFor="let dolar of listCotizacionDolar">
+        <div class="card-body">
+          <h5  class="card-title text-center">{{dolar.titulo}}</h5>
+          <p class="card-text text-center">
+            <strong>Compra:</strong> ${{dolar.compra}}
+          </p>
+          <p class="card-text text-center">
+            <strong>Venta:</strong> ${{dolar.venta}}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-4">
+    <div class="row">
+      <h2 class="mt-3 text-center">Cotizacion Dolar</h2>
+      <div class="col-sm-6">
+          <div class="card m-1" *ngFor="let cot_args of listCotizacionesARS">
+            <div class="card-body" >
+              <h5  class="card-title text-center">{{cot_args.titulo}}</h5>
+              <p class="card-text text-center">
+                <strong>Compra:</strong> ${{cot_args.compra}}
+              </p>
+              <p class="card-text text-center">
+                <strong>Venta:</strong> ${{cot_args.venta}}
+              </p>
+            </div>
+          </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="card m-1" *ngFor="let cot_usd of listCotizacionesUSD">
+          <div class="card-body">
+            <h5  class="card-title text-center">{{cot_usd.titulo}}</h5>
+            <p class="card-text text-center">
+              <strong>Compra:</strong> ${{cot_usd.compra}}
+            </p>
+            <p class="card-text text-center">
+              <strong>Venta:</strong> ${{cot_usd.venta}}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -48,6 +48,8 @@ export class AccountService {
               // la pagina se refresca.
               localStorage.setItem('user', JSON.stringify(user));
               this.userSubject.next(user);
+              console.log("Usuario")
+              console.log(user)
               return user;
           }));
   }
@@ -56,7 +58,7 @@ export class AccountService {
       // Remueve el usuario del almacenamiento local y establece el usuario actual como null
       localStorage.removeItem('user');
       this.userSubject.next(null!);
-      //this.router.navigate(['/login']);
+      this.router.navigate(['/login']);
   }
 
   register(user: User) {

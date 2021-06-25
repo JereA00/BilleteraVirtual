@@ -14,7 +14,11 @@ namespace CuentaVirtual.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     FirstName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     LastName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Dni = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Username = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CapitalPesos = table.Column<float>(type: "real", nullable: false),
+                    CapitalDolares = table.Column<float>(type: "real", nullable: false),
+                    CapitalCriptomonedas = table.Column<float>(type: "real", nullable: false),
                     PasswordHash = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>

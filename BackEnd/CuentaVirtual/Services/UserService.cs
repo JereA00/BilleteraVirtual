@@ -28,6 +28,7 @@ namespace CuentaVirtual.Services
         void Register(RegisterRequest model);
         void Update(int id, UpdateRequest model);
         void Delete(int id);
+        void InsertMoney(int id, InsertMoneyRequest model);
     }
     public class UserService : IUserService
     {
@@ -114,6 +115,18 @@ namespace CuentaVirtual.Services
         {
             var user = getUser(id);
             _context.Users.Remove(user);
+            _context.SaveChanges();
+        }
+
+        //Incremento de monto en cuenta de un usuario
+        public void InsertMoney(int id, InsertMoneyRequest model) 
+        {
+            //Obtengo el ID del usuario a modificar el monto
+            var user = _context.Users.SingleOrDefault(x => x.Id == id);
+
+            user.CapitalPesos = user.CapitalPesos + model.Monto;
+    
+            _context.Users.Update(user);
             _context.SaveChanges();
         }
 

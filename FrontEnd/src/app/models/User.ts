@@ -4,7 +4,11 @@ export class User{
     password: string;
     firstName: string;
     lastName: string;
-    token: string;
+    dni: string;
+    jwtToken: string;
+    // capitalPesos: number;
+    // capitalDolares: number;
+    // capitalCriptomonedas: number;
 
     constructor(){
         this.id = '';
@@ -12,6 +16,10 @@ export class User{
         this.password = '';
         this.firstName = '';
         this.lastName = '';
-        this.token = ''
+        this.dni = '';
+        this.jwtToken = '';
+        // this.capitalPesos = 100;
+        // this.capitalDolares = 0;
+        // this.capitalCriptomonedas = 0;
     }
 }

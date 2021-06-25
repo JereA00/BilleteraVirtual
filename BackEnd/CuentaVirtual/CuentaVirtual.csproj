@@ -29,8 +29,6 @@
     <Folder Include="Entities\" />
     <Folder Include="Helpers\" />
     <Folder Include="Middleware\" />
-    <Folder Include="Models\" />
-    <Folder Include="Models\Users\" />
     <Folder Include="Services\" />
   </ItemGroup>
   <ItemGroup>

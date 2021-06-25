@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CuentaVirtual.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20210612143937_Inicial")]
+    [Migration("20210616234238_Inicial")]
     partial class Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -26,6 +26,18 @@ namespace CuentaVirtual.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<float>("CapitalCriptomonedas")
+                        .HasColumnType("real");
+
+                    b.Property<float>("CapitalDolares")
+                        .HasColumnType("real");
+
+                    b.Property<float>("CapitalPesos")
+                        .HasColumnType("real");
+
+                    b.Property<string>("Dni")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FirstName")
                         .HasColumnType("nvarchar(max)");

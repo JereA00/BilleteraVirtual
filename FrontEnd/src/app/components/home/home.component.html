@@ -1,5 +1,36 @@
 <div class="p-4">
     <div class="container">
         <h1>Hola {{user.firstName}}!</h1>
+        <!--Formulario para ingresar pesos a la cuenta-->
+        <form [formGroup]="form" class="row g-3" (ngSubmit)="onSubmit()">
+            <div class="col-auto">
+                <p style="font-size: 1.2rem;"><strong>Ingrese el monto en pesos:</strong></p>
+            </div>
+            <div class="col-auto">
+                <label for="monto" class="visually-hidden">Monto</label>
+                <input type="number" formControlName="monto" 
+                class="form-control" id="monto" placeholder="Monto" 
+                [ngClass]="{ 'is-invalid': submitted && f.monto.errors }">
+                <div *ngIf="submitted && f.monto.errors" class="invalid-feedback">
+                    <div *ngIf="f.monto.errors.required">El monto es requerido</div>
+                    <div *ngIf="f.monto.errors?.min">El monto debe ser mayor a cero</div>
+                </div>
+            </div>
+            <div class="col-auto">
+              <button type="submit" class="btn btn-primary mb-3">Confirmar</button>
+            </div>
+        </form>
+        <!-- Tener en cuenta que no actualiza como se debe, tendria que ir en otra pagina la consulta o la transferencia-->
+        <div class="card">
+            <div class="card-body">
+              Su saldo en pesos es: ${{saldoPesos}}
+            </div>
+            <div class="card-body">
+                Su saldo en dolares es: ${{saldoDolares}}
+              </div>
+            <div class="card-body">
+                Su saldo en criptomonedas es: ${{saldoCriptomonedas}}
+            </div>
+        </div>
     </div>
 </div>

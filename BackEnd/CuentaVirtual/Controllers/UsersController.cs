@@ -59,7 +59,7 @@ namespace CuentaVirtual.Controllers
         public IActionResult Register(RegisterRequest model)
         {
             _userService.Register(model);
-            return Ok(new { message = "Registration successful" });
+            return Ok(new { message = "Registro exitoso" });
         }
 
         [HttpGet]
@@ -80,14 +80,41 @@ namespace CuentaVirtual.Controllers
         public IActionResult Update(int id, UpdateRequest model)
         {
             _userService.Update(id, model);
-            return Ok(new { message = "User updated successfully" });
+            return Ok(new { message = "Usuario actualizado correctamente" });
         }
 
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
             _userService.Delete(id);
-            return Ok(new { message = "User deleted successfully" });
+            return Ok(new { message = "Usuario eliminado correctamente" });
+        }
+
+        [HttpPut("monto/{id}")]
+        public IActionResult InsertMoney(int id, InsertMoneyRequest model)
+        {
+            _userService.InsertMoney(id, model);
+            return Ok(new { message = "Modificacion de Monto correcta" });
+        }
+
+        [HttpGet("monto/pesos/{id}")]
+        public IActionResult GetMoneyPesos(int id)
+        {
+            var user = _userService.GetById(id);
+            return Ok(user.CapitalPesos);
+        }
+
+        [HttpGet("monto/dolares/{id}")]
+        public IActionResult GetMoneyDolares(int id)
+        {
+            var user = _userService.GetById(id);
+            return Ok(user.CapitalDolares);
+        }
+        [HttpGet("monto/criptomonedas/{id}")]
+        public IActionResult GetMoneyCriptomonedas(int id)
+        {
+            var user = _userService.GetById(id);
+            return Ok(user.CapitalCriptomonedas);
         }
     }
 }

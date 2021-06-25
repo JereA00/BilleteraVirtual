@@ -25,6 +25,18 @@ namespace CuentaVirtual.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<float>("CapitalCriptomonedas")
+                        .HasColumnType("real");
+
+                    b.Property<float>("CapitalDolares")
+                        .HasColumnType("real");
+
+                    b.Property<float>("CapitalPesos")
+                        .HasColumnType("real");
+
+                    b.Property<string>("Dni")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("FirstName")
                         .HasColumnType("nvarchar(max)");
 

@@ -18,13 +18,20 @@ export class JwtInterceptor implements HttpInterceptor {
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
         // agrega el token al encabezado de autenticación con jwt si el usuario está conectado y
         // la solicitud se envia a la URL de la API
+        //console.log("Entro al interceptor")
         const user = this.accountService.userValue;
-        const isLoggedIn = user && user.token;
+        const isLoggedIn = user && user.jwtToken;
         const isApiUrl = request.url.startsWith(environment.apiUrl);
+        /* console.log("Usuario en interceptor")
+        console.log(user)
+        console.log("Si usuario esta logeado")
+        console.log(isLoggedIn)
+        console.log("Si la api de la URL es valida")
+        console.log(isApiUrl) */
         if (isLoggedIn && isApiUrl) {
             request = request.clone({
                 setHeaders: {
-                    Authorization: `Bearer ${user.token}`
+                    Authorization: `Bearer ${user.jwtToken}`
                 }
             });
         }

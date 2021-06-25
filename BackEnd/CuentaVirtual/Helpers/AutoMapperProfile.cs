@@ -36,6 +36,9 @@ namespace CuentaVirtual.Helpers
                         return true;
                     }
                 ));
+
+            // InsertMoneyRequest -> User
+            //CreateMap<InsertMoneyRequest, User>();
         }
     }
 }

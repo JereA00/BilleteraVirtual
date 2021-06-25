@@ -19,6 +19,9 @@ namespace CuentaVirtual.Models.Users
 
         [Required]
         public string LastName { get; set; }
+        
+        [Required]
+        public string Dni { get; set; }
 
         [Required]
         public string Username { get; set; }

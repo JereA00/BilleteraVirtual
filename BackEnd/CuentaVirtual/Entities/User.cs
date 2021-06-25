@@ -19,7 +19,11 @@ namespace CuentaVirtual.Entities
         public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        public string Dni { get; set; }
         public string Username { get; set; }
+        public float CapitalPesos { get; set; }
+        public float CapitalDolares { get; set; }
+        public float CapitalCriptomonedas { get; set; }
 
         [JsonIgnore]
         public string PasswordHash { get; set; }
